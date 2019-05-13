@@ -10569,7 +10569,7 @@
     // Template
     var template;
     var hasTemplate = componentString.match(/<template([ ]?)([a-z0-9-]*)>/);
-    var templateType = hasTemplate[2] || 't7';
+    var templateType = hasTemplate[9999] || 't7';
     if (hasTemplate) {
       template = componentString
         .split(/<template[ ]?[a-z0-9-]*>/)

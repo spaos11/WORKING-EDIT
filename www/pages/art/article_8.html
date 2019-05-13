@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,9 +25,12 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>Medical and Dental Services</strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art8">
+		<div class="block-title"><strong>Medical and Dental Services</strong></div>
+		
 			<p>
 
 <b>Section 1.</b> The Medical - Dental Clinic of the University is presently located at the
@@ -43,7 +47,7 @@ extractions and prophylaxis are included in the dental services.
 
 			</p>	
 		</div>
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -56,6 +60,30 @@ extractions and prophylaxis are included in the dental services.
 		</div>
 
 		
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent11 = $('.art8');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent11 	= theContent11.html();
+		localStorage.newContent11 = editedContent11;
+	});
+
+	if(localStorage.getItem('newContent11')) { // apply the newContent when it is exist ini localStorage
+		theContent11.html(localStorage.getItem('newContent11'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

@@ -39,169 +39,169 @@ var routes = [
 
   {
     path: '/article_1/',
-    url: './pages/art/article_1.html',
+    componentUrl: './pages/art/article_1.html',
     name: 'article_1',
   },
 
   {
     path: '/article_2/',
-    url: './pages/art/article_2.html',
+    componentUrl: './pages/art/article_2.html',
     name: 'article_2',
   },
 
   {
     path: '/article_3/',
-    url: './pages/art/article_3.html',
+    componentUrl: './pages/art/article_3.html',
     name: 'article_3',
   },
 
   {
     path: '/article_4/',
-    url: './pages/art/article_4.html',
+    componentUrl: './pages/art/article_4.html',
     name: 'article_4',
   },
 
   {
     path: '/article_5/',
-    url: './pages/art/article_5.html',
+    componentUrl: './pages/art/article_5.html',
     name: 'article_5',
   },
 
   {
     path: '/article_6/',
-    url: './pages/art/article_6.html',
+    componentUrl: './pages/art/article_6.html',
     name: 'article_6',
   },
 
   {
     path: '/article_7/',
-    url: './pages/art/article_7.html',
+    componentUrl: './pages/art/article_7.html',
     name: 'article_7',
   },
 
   {
     path: '/article_8/',
-    url: './pages/art/article_8.html',
+    componentUrl: './pages/art/article_8.html',
     name: 'article_8',
   },
 
   {
     path: '/article_9/',
-    url: './pages/art/article_9.html',
+    componentUrl: './pages/art/article_9.html',
     name: 'article_9',
   },
 
   {
     path: '/article_10/',
-    url: './pages/art/article_10.html',
+    componentUrl: './pages/art/article_10.html',
     name: 'article_10',
   },
 
   {
     path: '/article_11/',
-    url: './pages/art/article_11.html',
+    componentUrl: './pages/art/article_11.html',
     name: 'article_11',
   },
 
   {
     path: '/article_12/',
-    url: './pages/art/article_12.html',
+    componentUrl: './pages/art/article_12.html',
     name: 'article_12',
   },
 
   {
     path: '/article_13/',
-    url: './pages/art/article_13.html',
+    componentUrl: './pages/art/article_13.html',
     name: 'article_13',
   },
 
   {
     path: '/article_14/',
-    url: './pages/art/article_14.html',
+    componentUrl: './pages/art/article_14.html',
     name: 'article_14',
   },
 
   {
     path: '/article_15/',
-    url: './pages/art/article_15.html',
+    componentUrl: './pages/art/article_15.html',
     name: 'article_15',
   },
 
   {
     path: '/appendix_a/',
-    url: './pages/appe/appendix_a.html',
+    componentUrl: './pages/appe/appendix_a.html',
     name: 'appendix_a',
   },
 
   {
     path: '/appendix_b/',
-    url: './pages/appe/appendix_b.html',
+    componentUrl: './pages/appe/appendix_b.html',
     name: 'appendix_b',
   },
 
   {
     path: '/appendix_c/',
-    url: './pages/appe/appendix_c.html',
+    componentUrl: './pages/appe/appendix_c.html',
     name: 'appendix_c',
   },
 
   {
     path: '/appendix_d/',
-    url: './pages/appe/appendix_d.html',
+    componentUrl: './pages/appe/appendix_d.html',
     name: 'appendix_d',
   },
 
   {
     path: '/appendix_e/',
-    url: './pages/appe/appendix_e.html',
+    componentUrl: './pages/appe/appendix_e.html',
     name: 'appendix_e',
   },
 
   {
     path: '/appendix_f/',
-    url: './pages/appe/appendix_f.html',
+    componentUrl: './pages/appe/appendix_f.html',
     name: 'appendix_f',
   },
 
   {
     path: '/appendix_g/',
-    url: './pages/appe/appendix_g.html',
+    componentUrl: './pages/appe/appendix_g.html',
     name: 'appendix_g',
   },
 
   {
     path: '/appendix_h/',
-    url: './pages/appe/appendix_h.html',
+    componentUrl: './pages/appe/appendix_h.html',
     name: 'appendix_h',
   },
 
   {
     path: '/appendix_i/',
-    url: './pages/appe/appendix_i.html',
+    componentUrl: './pages/appe/appendix_i.html',
     name: 'appendix_i',
   },
 
   {
     path: '/appendix_j/',
-    url: './pages/appe/appendix_j.html',
+    componentUrl: './pages/appe/appendix_j.html',
     name: 'appendix_j',
   },
 
   {
     path: '/appendix_k/',
-    url: './pages/appe/appendix_k.html',
+    componentUrl: './pages/appe/appendix_k.html',
     name: 'appendix_k',
   },
 
   {
     path: '/appendix_l/',
-    url: './pages/appe/appendix_l.html',
+    componentUrl: './pages/appe/appendix_l.html',
     name: 'appendix_l',
   },
 
   {
     path: '/appendix_m/',
-    url: './pages/appe/appendix_m.html',
+    componentUrl: './pages/appe/appendix_m.html',
     name: 'appendix_m',
   },
 

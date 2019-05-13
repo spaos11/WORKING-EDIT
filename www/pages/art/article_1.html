@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -25,9 +26,12 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>General Directives</strong></div>
 		<div class="block">
+		<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art1">
+		<div class="block-title"><strong>General Directives</strong></div>
+		
 			<p class="just">
 <b>Section 1.</b> Every student shall observe the laws of the land, the rule
 regulations of the University and the standards of good society.<br><br>
@@ -270,7 +274,7 @@ classes.....................No Refund<br><br>
 			</p>	
 		</div>
 
-
+</div>
 
 		<!-- Navigation Buttons-->
 		<div class="block">
@@ -285,6 +289,30 @@ classes.....................No Refund<br><br>
 		        
 		    </p>
 		</div>
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent4 = $('.art1');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent4 	= theContent4.html();
+		localStorage.newContent4 = editedContent4;
+	});
+
+	if(localStorage.getItem('newContent4')) { // apply the newContent when it is exist ini localStorage
+		theContent4.html(localStorage.getItem('newContent4'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

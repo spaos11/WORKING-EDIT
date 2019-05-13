@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -25,9 +26,12 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>Student Code of Conduct</strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art12">
+		<div class="block-title"><strong>Student Code of Conduct</strong></div>
+		
 			<p>
 				
 <b>Section 1.</b> Discipline is a means to guide and liberate students to positively
@@ -127,7 +131,7 @@ honesty is beyond suspicion.
 			</p>	
 		</div>
 
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -139,6 +143,30 @@ honesty is beyond suspicion.
 		    </p>
 		</div>
 	
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent15 = $('.art12');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent15 	= theContent15.html();
+		localStorage.newContent15 = editedContent15;
+	});
+
+	if(localStorage.getItem('newContent15')) { // apply the newContent when it is exist ini localStorage
+		theContent15.html(localStorage.getItem('newContent15'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,10 +25,14 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>Guidance and Testing Services</strong></div>
 		<div class="block">
-			<p class="txtstyle">
+		
+		<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art6">
+        <div class="block-title"><strong>Guidance and Testing Services</strong></div>
+
+			<p>
 				
 
 	In coordination with the Office of the Director for Student Services &
@@ -81,11 +86,12 @@ registrar.<br><br>
 information with the administration with the administration, faculty and parents to
 facilitate decision making and learning about strategies for helping the counselee.
 
-			</p>	
+			</p>
+			<br>	
 		</div>
 
 
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -97,6 +103,30 @@ facilitate decision making and learning about strategies for helping the counsel
 		    </p>
 		</div>
 		
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent9 = $('.art6');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent9 	= theContent9.html();
+		localStorage.newContent9 = editedContent9;
+	});
+
+	if(localStorage.getItem('newContent9')) { // apply the newContent when it is exist ini localStorage
+		theContent9.html(localStorage.getItem('newContent9'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

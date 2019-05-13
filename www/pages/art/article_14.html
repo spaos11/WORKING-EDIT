@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -25,9 +26,12 @@
 
 
 	<div class="page-content bg-color-white">
-		<div>
+		<div><div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art14">
 		<div class="block-title"><strong>Student Offenses and their Corresponding Penalties</strong></div>
-		<div class="block">
+		
 			<p>
 				
 <b>Section 1.</b> Grave Offenses<br>
@@ -513,7 +517,7 @@ E. Disqualification from joining in any official athletic delegation<br><br>
 
 			</p>	
 		</div>
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -526,6 +530,30 @@ E. Disqualification from joining in any official athletic delegation<br><br>
 		</div>
 
 		
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent17 = $('.art14');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent17 	= theContent17.html();
+		localStorage.newContent17 = editedContent17;
+	});
+
+	if(localStorage.getItem('newContent17')) { // apply the newContent when it is exist ini localStorage
+		theContent17.html(localStorage.getItem('newContent17'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

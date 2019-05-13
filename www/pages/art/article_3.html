@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,9 +25,12 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>Scholarship and Financial Grants</strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art3">
+		<div class="block-title"><strong>Scholarship and Financial Grants</strong></div>
+		
 			<p class="txtstyle">
 
 The University offers several scholarships for academically talented
@@ -282,7 +286,7 @@ Office of the Coordinator for Student Services in the campus he/she is enrolled 
 		</div>
 
 
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -297,6 +301,30 @@ Office of the Coordinator for Student Services in the campus he/she is enrolled 
 		</div>
 
 		
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent6 = $('.art3');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent6 	= theContent6.html();
+		localStorage.newContent6 = editedContent6;
+	});
+
+	if(localStorage.getItem('newContent6')) { // apply the newContent when it is exist ini localStorage
+		theContent6.html(localStorage.getItem('newContent6'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

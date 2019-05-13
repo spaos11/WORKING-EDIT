@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -25,9 +26,12 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong>Duties and Responsibilities of Students</strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art11">
+		<div class="block-title"><strong>Duties and Responsibilities of Students</strong></div>
+		
 			<p>
 			
 
@@ -74,7 +78,7 @@ provisions.
 
 			</p>	
 		</div>
-
+</div>
 
 		<div class="block">
 			<p class="segmented">
@@ -87,6 +91,30 @@ provisions.
 		    </p>
 		</div>
 	
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent14 = $('.art11');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent14 	= theContent14.html();
+		localStorage.newContent14 = editedContent14;
+	});
+
+	if(localStorage.getItem('newContent14')) { // apply the newContent when it is exist ini localStorage
+		theContent14.html(localStorage.getItem('newContent14'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>
