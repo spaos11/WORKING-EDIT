@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,14 +25,74 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appc">
+		<div class="block-title"><strong>Guidelines Regulating the Use of Electronic Gadgets Among Students While Inside the University Premises</strong></div>
 		
+
+
+I. Objective:<br>
+
+<p class="txtstyle">
+To inculcate among the students the duties of being a responsible user of electronic gadgets such as but not limited Walkman, cellular phone, MP3, MPA, PSP inside the universty premises.<br><br>
+
+
+II. Duties of User of Electronic Gadgets<br><br>
+
+Every student who uses any of the above-mentioned electronic gadgets has the duty to:<br>
+1. Turn-off and not to use his/her electronic gadget before entering the classroom to attend classes;<br>
+2. Turn-off or switch to silent mode his/her electronic gadget before transacting with any of the University officers, or when consulting with his or her instructor, professor, and other University officials;<br>
+3. Exercise proper diligence over his/her electronic gadget or similar instrument to prevent possible loss due to being misplaced or stolen;<br>
+4. Refrain from using his/her electronic gadget while walking along corridors or stairways to avoid an unnecessary accident that could lead to physical injuries or harm and/or undesirable situations;<br>
+5. Avoid using his/her electronic gadget in a manner that could disturb the tranquility of other students who would want to use their spare time studying or doing other solemn activities; and<br>
+6. Desist from using his/her electronic gadget in such a manner that could result in damage or injury to another or by any willful act purposely done to cause damage or injury to another.<br><br>
+
+
+II. Sanctions:<br><br>
+
+
+A student who uses an electronic gadget but fails or neglects
+to observe the above-stated duties shall be penalized as follows:<br>
+
+
+1. For the 1st offense: Impoundment of gadget for one (1) week with suspension for one (1) day. Provided that the student violator has been properly apprised/oriented of the guidelines
+regulating the use of electronic gadgets regardless whether the student violator(s) is/are present as long supposed to be present during the orientation conducted student leader, professor or department chair;<br>
+2. For the 2nd offense: Impoundment of gadget for two (2) weeks with suspension for two (2) days;<br>
+3. For the 3d offense: Impoundment of gadget for three (3) weeks with suspension for three (3) days;<br>
+4. For the 4" offense and succeeding offenses: Impoundment of gadget for four (4) weeks or more with suspension for five (5) days or more.<br><br>
+
+IV. Procedure<br>
+
+<p class="txtstyle">
+Any party who may be injured as caused by the violation committed by another against the foregoing guidelines may file a the complaint before any of the apprehending officers herein below-stated or
+to the Office of Student Services.<br>
+
+<p class="txtstyle">
+The Campus Executive Directors, Department Chairs
+professors, instructors, non-teaching personnel and security officers/guards, may apprehend or cause the apprehension of any a student committing a violation of this policy.<br>
+</p>
+<p class="txtstyle">
+Upon apprehension, the apprehending officer, instructor, professors, etc. should confiscate the student I.D. and forward the same to the Office of the Student Services.<br>
+</p>
+<p class="txtstyle">
+The student concerned shall have to submit his written explanation within the day but not later than 4:00 pm preferably befor leaving the University Campus and where necessary, shall have to
+over his electronic gadget to impoundment or
+Services when told to do so. Failure to make the written explanation within the time herein provided shall be deemed waiver to pre his/her explanation and refusal of the student to turn over his/her
+electronic gadget, when instructed to do, shall constitute violation of this guideline. By virtue of such failure and/or refusal, the student concern
+be deemed suspended until compliance of the instruction. The SSAA will thus, subsequently impose the applicable penalty.<br>
+</p>
+<p class="txtstyle">
+A student penalized with suspension, or suspended, shall be deemed absent from classes a shall be counted applicable for Dropped and such absence
+from the class/subject.<br><br>
+</p>
+ </p>
+
 
 		
 		</div>
-
+	</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -44,6 +105,30 @@
 		</div>
 
 		
-	</div>
+
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta3 = $('.appc');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta3 	= theContenta3.html();
+		localStorage.newContenta3 = editedContenta3;
+	});
+
+	if(localStorage.getItem('newContenta3')) { // apply the newContent when it is exist ini localStorage
+		theContenta3.html(localStorage.getItem('newContenta3'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

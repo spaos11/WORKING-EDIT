@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,14 +25,62 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appb">
+		<div class="block-title"><strong>Pangasinan State University-Federated Student Government (PSU-FSG)
+</strong></div>
 		
+		
+<p class="txtstyle">
+Composition and Qualifications of FSG Officers under Article VI-Executive Department of the Constitution and By-Laws<br><br>
+
+
+Section 1. The Executive Department shall be the highest governing body of the FSG. It shall direct the operations of the organizations by executing the policies, principles, and guidelines promulgated.<br><br>
+Section 2. The Executive Department shall be composed of:<br>
+A. Elected Officers:<br>
+-President<br>
+-Executive Vice President<br>
+-Vice President for Projects and Activities<br>
+-Vice President for Student's Rights and Welfare<br>
+-Vice President for Communication<br>
+-Auditor<br>
+-Two (2) Business Managers<br>
+-Two (2) Public Relations Officers<br><br>
+B. Appointed Officers:<br>
+-Treasurer (to be appointed by the FSG President)<br>
+-Executive Secretary (to be appointed by the FSG President)<br>
+-Logistic Secretary (to be appointed by the VP for Projects and Activities)<br>
+-Secretary for Student's Rights and Welfare (to be appointed by the VP for Student's rights and Welfare)
+-Secretary for Communication (to be appointed by the VP for Communication)<br><br>
+Section 3. The president and the Vice presidents must have the following qualifications:<br>
+A. Must be a bonafide undergraduate student (not a professional student and must not have taken more than one course during his/her stay in the University) of PSU and presently elected as SSC President<br><br>
+B. Must have a regular load of at least 15 units; provided that a lesser number of units shall be followed if it is the regular load prescribed by
+the curriculum for the semester.<br><br>
+C. Must have the point average (GPA) of not lower than 2.50 prior to the election with the certification coming from their respective campus registrar to be recognized or notified by the Electoral Tribunal.<br><br>
+D. Preferably a junior or senior student on the day of the election.<br><br>
+E. Shall not have the grade of "5" or "INC" and/or "DROP mark in his academic subjects in the undergraduate program for the previous semesters preceding the election. A student with an INC grade maybe allowed to run for officership provided that completions of requirements were satisfied in prior to the filling of his candidacy.<br><br>
+F. A prospective candidate who had been meted out of suspension or any graver penalty by a competent authority shall be barred from filling his candidacy.<br><br>
+G. No first semester graduating shall be allowed to run for office but shall be allowed to cast his/her vote.<br><br>
+H. Have not been rejected to any disciplinary actions.<br><br>
+SECTION 4. The officer members of the Executive Department shall have the following qualifications:<br>
+A. Must be a bona fide undergraduate student (not a Professional student) of PSU and presently elected as SSC officer in their respective campuses.<br><br>
+B. Must have a regular load of at least 15 units; provided that a lesser number of its units shall be allowed if it is regular load prescribe by the curriculum for the semester.<br><br>
+C. Must have a grade point (GPA) of not lower than 2.50 prior to the election.<br><br>
+D. Preferably a junior or senior student in the day of the election.<br><br>
+
+E. A prospected candidate who had been meted out of suspension or any graver penalty a competent shall be barred from filing his candidacy.<br><br>
+F. No first semester graduating student shall be allowed to run for office but shall be allowed to cast his/her vote.<br><br>
+G. Have not been subjected to any disciplinary action.<br><br>
+SECTION 5. The Executive Department shall submit to the Legislative Department within fifteen (15) working days from the opening of any regular session as the basis of the general appreciation bill, a budget of expenditure and sources of financing, including a receipt from the existing and proposed revenue measures.<br><br>
+SECTION 6. The officers of the Executive Department shall serve for one year from the day they assumed their offices until their successors have.<br><br>
+
+</p>
 
 		
 		</div>
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -41,9 +90,33 @@
 
 				<a href="/appendix_c/" class="button button-outline button-active color-blue">Next</a>        
 		    </p>
-		</div>
+		
 
 		
 	</div>
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta2 = $('.appb');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta2 	= theContenta2.html();
+		localStorage.newContenta2 = editedContenta2;
+	});
+
+	if(localStorage.getItem('newContenta2')) { // apply the newContent when it is exist ini localStorage
+		theContenta2.html(localStorage.getItem('newContenta2'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

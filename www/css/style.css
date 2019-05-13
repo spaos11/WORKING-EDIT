@@ -3,6 +3,13 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
+.foot{
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+
+}
 .size{
 
   font-size: 150%;

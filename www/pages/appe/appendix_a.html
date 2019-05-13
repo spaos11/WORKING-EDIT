@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,11 +25,38 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appa">
+		<div class="block-title"><strong>GUIDELINES AND PROCEDURE FOR STUDENT ORGANIZATION IN APPLYING FOR FUND - RAISING PROJECTS/ACTIVITIES</strong></div>
 		
+		
+<p class="txtstyle">
+Pangasinan State University upholds the significance of Student Organizations in the realization of academic excellence - its mission-vision. To strengthen the self-sufficiency of student organizations and in order
+to regulate their fund-generating activities consistent with the University philosophy, the following guidelines and procedures shall apply, namely;<br><br>
 
+
+A. The organization shall submit a fund - generating activity/project proposal with the mechanics which shall include the following:<br>
+1. Name of the Project/Activity to be funded;<br>
+2. Rationale and Objectives of the Project;<br>
+3. Estimated Cost/Expenses of the project/activity;<br>
+4. The person/s involved and their respective roles/functions;<br><br>
+B. The fund-generating project should be relevant to the objectives of the organizations and not contrary to the provisions of the Student Handbook, laws, morals, good customs, public order or public policy.<br><br>
+C. Application of Student Organizations to conduct a fund - generating activity shall have an endorsement from the Faculty Adviser, the Student Service Campus Coordinator, Department Chair, and the Campus Executive Director. Student organizations not belonging to any particular academic department shall be endorsed by its Adviser. The application
+shall be submitted to the office of the Campus Student Services Coordinator (CSSC) for evaluation.<br><br>
+D. Upon favorable findings, the CSSC will, forthwith, forward the application to the office of the University President, through the Director of the SSAA for approval. If otherwise, the SSAA may require revision, or deny due course of the same.<br><br>
+E. Submission of the proposal to conduct a fund - generating activity project shall be not later than 15 days before the day of the actual holding of the same. Proposal submitted not within the prescribed period as herein provided shall not be given due course<br><br>
+F. Ten (10) days after the date of the holding of the fund - generating activity, the President or the Treasurer of the Organization shall submit a
+written report of the activity together with the Financial Statement and Evaluation of the same. Failure on the part of the concerned applicants
+to do so as herein provided will be dealt with accordingly.<br><br>
+G. The organization shall maintain its financial record and shall be subject
+to random audit by the University Internal Auditor through the SSAA.<br>
+<br>
+</p>
+
+
+</div>
 		
 		</div>
 
@@ -41,9 +69,33 @@
 
 				<a href="/appendix_b/" class="button button-outline button-active color-blue">Next</a>        
 		    </p>
-		</div>
+		
 
 		
 	</div>
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta1 = $('.appa');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta1 	= theContenta1.html();
+		localStorage.newContenta1 = editedContenta1;
+	});
+
+	if(localStorage.getItem('newContenta1')) { // apply the newContent when it is exist ini localStorage
+		theContenta1.html(localStorage.getItem('newContenta1'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>
