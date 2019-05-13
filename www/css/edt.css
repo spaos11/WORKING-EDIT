@@ -20,20 +20,35 @@
   cursor: pointer;
   box-shadow: -1px 1px 4px rgba(0,0,0,0.5);
 }
+.editm, .savem{
+  z-index: 9999;
+  width: 30px;
+  display: block;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  padding: 4px 10px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: -1px 1px 4px rgba(0,0,0,0.5);
 
-.edit { 
+}
+
+.edit, .editm { 
   background: #557a11;
   color: #f0f0f0;
   opacity: 1;
   transition: opacity .2s ease-in-out;
 }
 
-.save {
+.save, .savem {
   display: none;
   background: #bd0f18;
   color: #f0f0f0;
 }
 
-.box:hover .edit {
+.box:hover .edit, .editm {
   opacity: 1;
 }

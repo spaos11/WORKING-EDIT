@@ -1,6 +1,6 @@
 var theContent = $('.misvis');// set the content
 
-	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+	$('.savem').on('click', function(){ // store the new content in localStorage when the button is clicked
 		var editedContent 	= theContent.html();
 		localStorage.newContent = editedContent;
 	});
