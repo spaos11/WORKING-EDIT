@@ -1,0 +1,120 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/appendix/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Appendix D</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/appendix_d/" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/#/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appd">
+		<div class = "block-title"> <strong> MGA GARANTIYA SA MGA GAWAIN SA ESTUDYANTE </strong> </div>
+
+
+<p class = "txtstyle">
+Ang Pangasinan State University, bilang pagkilala at pagsunod sa patakaran sa kalidad ng paaralan, at ang lubos na pagkilala sa mga pangangailangan at
+kahalagahan ng pakikilahok ng mag-aaral sa aktibidad / gawain na pinangungunahan ng
+ang departamento, kolehiyo / o ng mag-aaral sa kanilang sarili sa pamamagitan ng kani-kanilang samahan ay nagtatakda ng mga alituntunin sa pag-oorganisa ng mga aktibidad ng mag-aaral tulad ng sumusunod: <br> <br>
+
+
+1. Ang mga aktibidad lamang na na-sponsor ng isang nararapat na kinikilalang organisasyon ng mag-aaral o ng Campus, at nararapat na maaprubahan ng Pangulo at ng Direktor para sa Mga Serbisyo ng Mag-aaral ay pahihintulutang isagawa sa loob ng mga lugar ng unibersidad o sa labas ng paaralan kung naaangkop at kinakailangan; < br>
+2. Ang mga gawain na isasagawa ng mga mag-aaral o organisasyon ay dapat na itaguyod ang pananaw ng misyon ng Unibersidad at mga pangunahing halaga at makipag-ugnayan sa Supreme Student Council (SSC) o iba pang mga organisasyon na may parehong layunin
+3. Ang nasabing aktibidad ay dapat kasama sa programa ng mga aktibidad na isinumite sa SSAA bago ang pagkilala sa organisasyon ng mag-aaral. Ang mga aktibidad na hindi iminungkahi ay hindi pahihintulutan na gawin o sasailalim sa pag-apruba ng SSAA, Student's Campus
+Coordinator ng Serbisyo at Direktor para sa Mga Serbisyo ng Mag-aaral ng Unibersidad. <br>
+4. Ang organisasyon na nag-aalala o ang kinatawan nito ay kailangang hawakan at isumite ang mga sumusunod na dokumento sa SSAA dalawang linggo bago ang petsa ng aktibidad: <br> <br>
+<b> A. </b> Nakamit ang Pagwawaksi ng mga magulang, kung naaangkop; <br>
+<b> B. </b> Paglutas, kung naaangkop; <br>
+<b> C. </b> Program ng Aktibidad at; <br>
+<b> D. </b> Iminungkahing Badyet at Gastos. <br> <br>
+
+5. Sa loob ng 7 araw ng trabaho pagkatapos makumpleto ang aktibidad, ang mga organisasyon ng mag-aaral / mga kinatawan nito ay kinakailangang sumailalim sa Coordinator ng Campus Student Services ang mga sumusunod: <br> <br>
+
+
+<b> A. </b> Pagsasagawa ng Ulat sa mga larawan; <br>
+<b> B. </b> Pahayag ng Pananalapi o Pagpapalubha ng mga Pondo; at <br>
+<b> C. </b> Resulta ng Pagsusuri. <br>
+<b> 6. </b> Ang pagkabigong pareho upang sumunod sa mga Alituntuning ito ay nangangahulugan ng BABALA sa nababahala ng mag-aaral na Organisasyon, lahat ng mga opisyal nito at pagbawi ng pagkilala nito tulad ng ibinigay ng Handbook ng Mag-aaral. Ang nasabing organisasyon ay inalis na kwalipikado upang lumahok sa
+hanapin ang natitirang organisasyon ng taon. <br>
+7. Ang mga patnubay na ito ay dapat ipatupad sa pagsang-ayon ng Pangulo. <br>
+8. Ang mga sinususugan na alituntunin ay dapat magkabisa ngayong Hunyo 2011. <br> <br>
+
+</p>
+		</div>
+	</div>
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/appendix_c_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/appendix_e_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		</div>
+
+		
+
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta4 = $('.appd');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta4 	= theContenta4.html();
+		localStorage.newContenta4 = editedContenta4;
+	});
+
+	if(localStorage.getItem('newContenta4')) { // apply the newContent when it is exist ini localStorage
+		theContenta4.html(localStorage.getItem('newContenta4'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

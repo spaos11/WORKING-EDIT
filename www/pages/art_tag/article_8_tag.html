@@ -1,0 +1,108 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/articles/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Artikulo VIII</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/article_8/" class="fab-label-button">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art8t">
+		<div class="block-title"><strong>Medical and Dental Services</strong></div>
+		
+			<p>
+
+<b>Seksyon 1.</b> Ang Medikal - Dental Clinic ng Unibersidad ay kasalukuyang matatagpuan sa
+PSU - Main Campus, Lingayen, Pangasinan. Ito ay pinapatakbo ng isang Unibersidad
+Doktor, University Dentist, at isang nars. Subalit ang ilang mga campus ng
+Ang University ay may kani-kanilang mga nursed upang magbigay ng medikal na konsultasyon at
+paggamot araw-araw sa klinika.
+<br><br>
+
+<b>Seksyon 2.</b> Ang unang dosis ng mga gamot ay binibigyan ng libreng hangga't magagamit ang mga stock.
+Ang medikal na pagsusuri ng mga atleta ay ginagawa bago ang mga kaganapan sa palakasan. Ang mga medikal na kawani
+ay dumadalo rin sa mga emerhensiya na nakatagpo sa mga paligsahan sa palakasan. Dental
+Ang mga extraction at prophylaxis ay kasama sa mga serbisyo ng ngipin.
+
+
+
+			</p>	
+		</div>
+</div>
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/article_7_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/article_9_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		</div>
+
+		
+	
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent11t = $('.art8t');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent11t 	= theContent11t.html();
+		localStorage.newContent11t = editedContent11t;
+	});
+
+	if(localStorage.getItem('newContent11t')) { // apply the newContent when it is exist ini localStorage
+		theContent11t.html(localStorage.getItem('newContent11t'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

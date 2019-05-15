@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,14 +25,128 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/appendix_m_tag/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appm">
+		<div class="block-title"><strong>Implementing Guidelines of the Board Topnotchers and the Program
+Incentive Awards</strong></div>
 		
+	
 
-		
+<p class="txtstyle">
+The Board Topnotchers' Incentives Award is a program to be
+implemented by the Pangasinan State University to encourage its graduates to
+achieve better performance in the Board Examinations administered by the
+national Government, covering programs offered by the University.<br><br>
+
+As an institutionalized motivational system, the award aims to provide
+monetary incentives to the following:<br><br>
+
+a)Graduates who took the Board Examinations in the licensure exam
+given by PRC in the degree they have earned from PSU and land in
+any of the top ten places; and<br>
+b) The department of the degree programs whose passing rate has
+surpassed the National Passing Percentage.<br><br>
+
+Qualification for Awardees:<br>
+For Graduate Awardees:<br>
+
+1.Must be a bonafide graduate of Pangasinan State University.<br>
+2.Should belong to the top 10 rank in the board examination result of
+his/her degree.<br>
+3.For LET passers, who are non BSE or BEED graduate, both their
+undergraduate degree and their professional education units should
+have been taken from Pangasinan State University. (all programs
+should be included)<br><br>
+
+For Program Awardees<br>
+1. The degree program should have a minimum of ten (10)
+Examinees.<br>
+2. The percentage of passers will be based on the total number of
+students of the degree program who took the board exam in the
+current exam cycle.<br><br>
+
+The computation shall be based below:<br>
+Passing Percentage 
+No. of Board Passers of the Degree Program
+No. of Board Takers of the Degree Program
+<br>
+The following documents are required as evidence of the data mentioned above:<br><br>
+a. A document issued by the governing National Government Agency administering the board examination, as to the number of board passers of the said degree program; and<br>
+b. A document issued by the governing National Government Agency administering the board examination, as to the number of board takers of the said degree program.
+Extent of incentive:<br>
+The amount of incentive to be given will be based on the following:<br><br>
+
+
+For Graduate Awards:<br>
+<table>
+	<tr>
+		<th>Rang in the Board Exams</th><th>Proposed Incentives</th>
+	</tr>
+	<tr>
+		<td>1st Place </td><td>P 150,000.00</td>
+	</tr>
+	<tr>
+		<td>2nd Place</td><td>P 100,000.00</td>
+	</tr>
+	<tr>
+		<td>6th Place to 10th Place </td><td>P 80,000.00</td>
+	</tr>
+</table>
+
+<br>
+
+For Program Awards<br><br>
+<table>
+	<tr>
+		<th>Passing Rate for the Degree Program</th><th>Proposed Incentives</th>
+	</tr>
+	<tr>
+		<td>10%-19% above the national passing percentage</td><td>P 10,000.00</td>
+	</tr>
+	<tr>
+		<td>20%-29% above the national passing percentage</td><td>P 100,000.00</td>
+	</tr>
+	<tr>
+		<td>30%-39% above the national passing percentage</td><td>P 80,000.00</td>
+	</tr>
+	<tr>
+		<td>40%-49% above the national passing percentage</td><td>P 80,000.00</td>
+	</tr>
+	<tr>
+		<td>50% or more above the national passing percentage </td><td>P 80,000.00</td>
+	</tr>
+</table>
+
+
+<br>
+Process in Claiming Cash Incentive:<br><br>
+1.	Appropriate communication should be made to the office of Vice President for Academic and Research regarding the awardees’ intent to avail of said incentive.<br>
+2.	The cash incentive will be awarded during the graduation ceremonies in the school year board result was released.<br>
+Conditions on the Utilization of Awarded Incentives<br><br>
+	For board topnotchers, the monetary incentives awarded by the University shall be fully discretionary to the awardee’s purpose and shall not in any way be subjected to the audit system governing the University. It is however encouraged that the awardee utilized the cash incentive for his/her career improvement.<br>
+	For the degree programs awardees, incentives will be used to improved its facilities and upgrade its equipment or to be used for the professional development of the members of the department based on a proposal to be submitted to the Office of the Vice President for Academic and Research.<br>
+
 		</div>
-
+</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -44,6 +159,30 @@
 		</div>
 
 		
-	</div>
+	
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta13 = $('.appm');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta13 	= theContenta13.html();
+		localStorage.newContenta13 = editedContenta13;
+	});
+
+	if(localStorage.getItem('newContenta13')) { // apply the newContent when it is exist ini localStorage
+		theContenta13.html(localStorage.getItem('newContenta13'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

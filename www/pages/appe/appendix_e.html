@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -19,19 +20,108 @@
 			</div>
 			
 		</div>
-	</div>
-
+	
+</div>
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/appendix_e_tag/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appe">
+		<div class="block-title"><strong>THE ANTI-SMOKING POLICY</strong></div>
+		
 		
 
-		
+	
+<p class="txtstyle">
+Pursuant to CHED Memorandum Order No. 63 Series of 2007
+“Prohibition of Smoking in Higher Education Institutions"  which is in response to 
+Republic Act 9211, Pangasinan State University implements a strict NO
+SMOKING POLICY.<br><br>
+
+The policy specifically prohibits smoking, as well as
+distributing tobacco products within the PSU vicinity.
+MECHANICS<br><br>
+1. The policy covers within one hundred (100) meters from any point of the University's perimeter.<br>
+2. In all areas covered by the policy, NO SMOKING AREA signage shall be placed.<br>
+3. All university authorities can confiscate IDs of the violators as may be deemed appropriate.<br>
+4. The confiscated IDs shall be tuned over to the guard-on-duty and shall
+then be immediately forwarded to the Office of Student Services Coordinator<br>
+5. Owners of confiscated IDs shall report to the Student Services Coordinator
+within three (3) regular working days.<br>
+6. All violators caught shall be required to attend a seminar on anti-smoking
+campaign that will be conducted by the Red Cross Youth (RCY) as
+scheduled.<br>
+7. If the violator fails to comply with the necessary requirements of SSAA,it
+shall be deemed as waiver of his right and SSAA reserves the right to
+render a decision and thereafter impose the penalty provided for in the
+Student Handbook.<br>
+8. The University condemns selling and distribution of tobacco products
+within the declared NO SMOKING area.<br>
+9. The policy governs all students and employees of this University.<br>
+10. Barangay officials must regulate the selling and distribution of cigarettes in
+the area.<br><br>
+IMPLEMENTING RULES AND REGULATIONS<br><br>
+Pangasinan State University firmly upholds one of its core environmental consciousness. As an advocate of the University formulated and issued appropriate rules and regulations necessary
+for the efficient and effective implementation of the NO SMOKING POLICY.<br><br>
+
+<b>SECTION I. PURPOSE</b><br>
+Generally, Pangasinan State University's NO SMOKING POLICY is
+aimed to absolutely prohibit smoking in the University and within 100 meters
+The push behind this is its advocacy for health and environmental consciousness.<br><br>
+
+<b>SECTION II. DEFINITION OF TERMS<b><br>
+1, University refers to the Pangasian State University<br>
+2. CHED Commission on Higher Education<br>
+3. Barangay Officials refers to slected officials of the barangay where
+PSU Campus is located<br>
+4. Authority refers to the security guards, officers, employees and any
+other members of the academic community<br><br>
+
+<b>SECTION III. COVERAGE OF IMPLEMENTATION</b><br>
+All bonafide students of the different Campuses of PSU shall be covered
+by the program. Student violators shall be within the jurisdiction of SSAA.<br><br>
+
+<b>SECTION IV. EXECUTION STRATEGY OF PROGRAM<b><br>
+The University shall coordinate with the Barangay Officials of the
+concerned PSU Campuses on the implementation of the program. The powers,
+duties and responsibilities are all governed by the policy.<br><br>
+
+<b>SECTION V. IMPLEMENTATION</b><br>
+This implementing Rules and Regulations shall take effect upon the
+approval of the Student Handbook.<br><br>
+
+<b>SECTION VI. PUBLIC INFORMATIONS DISSEMINATION PROGRAM</b><br>
+The information dissemination regarding the program shall be done
+through signage and during the campus orientation.<br><br>
+
+<b>SECTION VII. PERSONS IN AUTHORITY</b><br>
+Barangay officials shall serve as authorities.<br><br>
+
+<b>SECTION VII EFFECTIVITY</b><br>
+School officials, faculty members, personnel, security guards and
+It shall take effect upon the approval of this handbook.<br>
+</p>
 		</div>
-
+	</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -44,6 +134,30 @@
 		</div>
 
 		
-	</div>
+
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta5 = $('.appe');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta5 	= theContenta5.html();
+		localStorage.newContenta5 = editedContenta5;
+	});
+
+	if(localStorage.getItem('newContenta5')) { // apply the newContent when it is exist ini localStorage
+		theContenta5.html(localStorage.getItem('newContenta5'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

@@ -1,0 +1,147 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/articles/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Artikulo XI</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/article_11/" class="fab-label-button">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art11t">
+		<div class="block-title"><strong>Duties and Responsibilities of Students</strong></div>
+		
+			<p>
+			
+
+Ang bawat estudyante ay dapat:<br><br>
+<b>Seksyon 1.</b> Pag-ibig sa Diyos, ang kanyang mga kapwa bilang kanyang pagmamahal sa sarili, at magsikap na manguna
+banal at kapaki-pakinabang na buhay.
+<br><br>
+
+<b>Seksyon 2.</b> Obserbahan at itaguyod sa lahat ng oras ang Kodigo ng Pag-uugali at Disiplina
+ang mga patakaran, regulasyon at mga patakaran na ipinahayag ng Unibersidad.
+<br><br>
+
+<b>Seksyon 3.</b> Suportahan at aktibong lumahok sa mga programang sinimulan ng SSC, mga proyekto
+at mga gawain; at sa pag-promote kung ang pangkalahatang kapakanan at sa pagkakaroon ng isang
+makatarungan, maayos at maawain na lipunan.
+<br><br>
+
+<b>Seksyon 4.</b> Tulong sa pagsasagawa ng mga indibidwal at panlipunang mga karapatan at responsibilidad
+ang pagpapalakas ng kalayaan, at pagpapahusay ng pakikipagtulungan sa mga mag-aaral
+guro, kawani at administrasyon sa pagtugis ng isang progresibo at matatag
+akademikong kapaligiran para sa pambansang pag-unlad.
+<br><br>
+
+<b>Seksyon 5.</b>Payuhan ang mga awtorisadong dues, bayad at mga kontribusyon, at protektahan
+mapanatili ang mga katangian ng Unibersidad.
+<br><br>
+
+<b>Seksyon 6.</b>Igalang ang mga karapatan ng mga kapwa mag-aaral, ang mga kasapi ng mga guro at
+ang administratibong kawani ng Unibersidad: ang tungkulin ng mga guro bilang magulang na kahalili
+ay dapat ding makilala at respetuhin ng bawat estudyante.
+<br><br>
+
+<b>Seksyon 7.</b> Igalang at magsikap na ipagpatuloy ang mga kanais-nais na mga kaugalian at tradisyon
+ng sambayanang Pilipino, ang mga nararapat na awtoridad nito, ang mga batas ng lupain, at ang mga tuntunin at patakaran ng Unibersidad.
+<br><br>
+
+<b>Seksyon 8.</b> Patibayin ang akademiko at moral na integridad kung ang University sa pamamagitan ng pagkamit
+kahusayan at moralidad.
+<br><br>
+
+<b>Seksyon 9.</b> Itaguyod at panatilihin ang kapayapaan at kaayusan, pagkakasundo, pakikipagkaibigan
+at pagkakaisa sa Unibersidad sa pamamagitan ng pagsunod sa mga patakaran sa disiplina at maayos
+relasyon sa mga kapwa mag-aaral at sa mga tauhan ng Unibersidad.
+<br><br>
+
+<b>Seksyon 10.</b> Isagawa ang kanyang mga karapatan sa responsibilidad sa kaalaman na siya ay
+mananagot sa Diyos para sa anumang paglabag sa pangkalahatang kapakanan at ng mga karapatan ng
+iba pa.
+<br><br>
+
+<b>Seksyon 11.</b>Ipagtanggol at protektahan ang Konstitusyon at Batas ng Kasunduan at sumunod
+mga probisyon.
+
+
+			</p>	
+		</div>
+</div>
+
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/article_10_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/article_12_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		</div>
+	
+	
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent14t = $('.art11t');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent14t 	= theContent14t.html();
+		localStorage.newContent14t = editedContent14t;
+	});
+
+	if(localStorage.getItem('newContent14t')) { // apply the newContent when it is exist ini localStorage
+		theContent14t.html(localStorage.getItem('newContent14t'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

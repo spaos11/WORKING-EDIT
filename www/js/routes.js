@@ -5,11 +5,20 @@ var routes = [
     url: './index.html',
     name: 'home',
   },
+   {
+    path: '/index_tag/',
+    componentUrl: './pages/index_tag.html',
+    name: 'index_tag',
+  },
   // About page
   {
     path: '/articles/',
     url: './pages/articles.html',
     name: 'articles',
+  }, {
+    path: '/articles_tag/',
+    url: './pages/articles_tag.html',
+    name: 'articles_tag',
   },
 
   {
@@ -17,36 +26,65 @@ var routes = [
     url: './pages/appendix.html',
     name: 'appendix',
   },
-
+{
+    path: '/appendix_tag/',
+    url: './pages/appendix_tag.html',
+    name: 'appendix_tag',
+  },
 
    {
     path: '/prelim1/',
     componentUrl: './pages/art/prelim1.html',
     name: 'prelim1',
   },
-
+{
+    path: '/prelim1_tag/',
+    componentUrl: './pages/art_tag/prelim1_tag.html',
+    name: 'prelim1_tag',
+  },
   {
     path: '/univ_gov/',
     componentUrl: './pages/art/univ_gov.html',
     name: 'univ_gov',
+  },  {
+    path: '/univ_gov_tag/',
+    componentUrl: './pages/art_tag/univ_gov_tag.html',
+    name: 'univ_gov_tag',
   },
+
 
   {
     path: '/acad_prog/',
     componentUrl: './pages/art/acad_prog.html',
     name: 'acad_prog',
   },
-
+ {
+    path: '/acad_prog_tag/',
+    componentUrl: './pages/art_tag/acad_prog_tag.html',
+    name: 'acad_prog_tag',
+  },
   {
     path: '/article_1/',
     componentUrl: './pages/art/article_1.html',
     name: 'article_1',
   },
 
+   {
+    path: '/article_1_tag/',
+    componentUrl: './pages/art_tag/article_1_tag.html',
+    name: 'article_1_tag',
+  },
+
   {
     path: '/article_2/',
     componentUrl: './pages/art/article_2.html',
     name: 'article_2',
+  },
+
+   {
+    path: '/article_2_tag/',
+    componentUrl: './pages/art_tag/article_2_tag.html',
+    name: 'article_2_tag',
   },
 
   {
@@ -56,9 +94,21 @@ var routes = [
   },
 
   {
+    path: '/article_3_tag/',
+    componentUrl: './pages/art_tag/article_3_tag.html',
+    name: 'article_3_tag',
+  },
+
+  {
     path: '/article_4/',
     componentUrl: './pages/art/article_4.html',
     name: 'article_4',
+  },
+
+   {
+    path: '/article_4_tag/',
+    componentUrl: './pages/art_tag/article_4_tag.html',
+    name: 'article_4_tag',
   },
 
   {
@@ -67,16 +117,34 @@ var routes = [
     name: 'article_5',
   },
 
+   {
+    path: '/article_5_tag/',
+    componentUrl: './pages/art_tag/article_5_tag.html',
+    name: 'article_5_tag',
+  },
+
   {
     path: '/article_6/',
     componentUrl: './pages/art/article_6.html',
     name: 'article_6',
   },
 
+    {
+    path: '/article_6_tag/',
+    componentUrl: './pages/art_tag/article_6_tag.html',
+    name: 'article_6_tag',
+  },
+
   {
     path: '/article_7/',
     componentUrl: './pages/art/article_7.html',
     name: 'article_7',
+  },
+
+   {
+    path: '/article_7_tag/',
+    componentUrl: './pages/art_tag/article_7_tag.html',
+    name: 'article_7_tag',
   },
 
   {
@@ -86,9 +154,22 @@ var routes = [
   },
 
   {
+    path: '/article_8_tag/',
+    componentUrl: './pages/art_tag/article_8_tag.html',
+    name: 'article_8_tag',
+  },
+
+
+  {
     path: '/article_9/',
     componentUrl: './pages/art/article_9.html',
     name: 'article_9',
+  },
+
+    {
+    path: '/article_9_tag/',
+    componentUrl: './pages/art_tag/article_9_tag.html',
+    name: 'article_9_tag',
   },
 
   {
@@ -97,10 +178,22 @@ var routes = [
     name: 'article_10',
   },
 
+    {
+    path: '/article_10_tag/',
+    componentUrl: './pages/art_tag/article_10_tag.html',
+    name: 'article_10_tag',
+  },
+
   {
     path: '/article_11/',
     componentUrl: './pages/art/article_11.html',
     name: 'article_11',
+  },
+
+    {
+    path: '/article_11_tag/',
+    componentUrl: './pages/art_tag/article_11_tag.html',
+    name: 'article_11_tag',
   },
 
   {
@@ -109,10 +202,22 @@ var routes = [
     name: 'article_12',
   },
 
+   {
+    path: '/article_12_tag/',
+    componentUrl: './pages/art_tag/article_12_tag.html',
+    name: 'article_12_tag',
+  },
+
   {
     path: '/article_13/',
     componentUrl: './pages/art/article_13.html',
     name: 'article_13',
+  },
+
+   {
+    path: '/article_13_tag/',
+    componentUrl: './pages/art_tag/article_13_tag.html',
+    name: 'article_13_tag',
   },
 
   {
@@ -122,9 +227,21 @@ var routes = [
   },
 
   {
+    path: '/article_14_tag/',
+    componentUrl: './pages/art_tag/article_14_tag.html',
+    name: 'article_14_tag',
+  },
+
+  {
     path: '/article_15/',
     componentUrl: './pages/art/article_15.html',
     name: 'article_15',
+  },
+
+   {
+    path: '/article_15_tag/',
+    componentUrl: './pages/art_tag/article_15_tag.html',
+    name: 'article_15_tag',
   },
 
   {
@@ -205,6 +322,83 @@ var routes = [
     name: 'appendix_m',
   },
 
+  {
+    path: '/appendix_a_tag/',
+    componentUrl: './pages/appe_tag/appendix_a_tag.html',
+    name: 'appendix_a_tag',
+  },
+
+  {
+    path: '/appendix_b_tag/',
+    componentUrl: './pages/appe_tag/appendix_b_tag.html',
+    name: 'appendix_b_tag',
+  },
+
+  {
+    path: '/appendix_c_tag/',
+    componentUrl: './pages/appe_tag/appendix_c_tag.html',
+    name: 'appendix_c_tag',
+  },
+
+  {
+    path: '/appendix_d_tag/',
+    componentUrl: './pages/appe_tag/appendix_d_tag.html',
+    name: 'appendix_d_tag',
+  },
+
+  {
+    path: '/appendix_e_tag/',
+    componentUrl: './pages/appe_tag/appendix_e_tag.html',
+    name: 'appendix_e_tag',
+  },
+
+  {
+    path: '/appendix_f_tag/',
+    componentUrl: './pages/appe_tag/appendix_f_tag.html',
+    name: 'appendix_f_tag',
+  },
+
+  {
+    path: '/appendix_g_tag/',
+    componentUrl: './pages/appe_tag/appendix_g_tag.html',
+    name: 'appendix_g_tag',
+  },
+
+  {
+    path: '/appendix_h_tag/',
+    componentUrl: './pages/appe_tag/appendix_h_tag.html',
+    name: 'appendix_h_tag',
+  },
+
+  {
+    path: '/appendix_i_tag/',
+    componentUrl: './pages/appe_tag/appendix_i_tag.html',
+    name: 'appendix_i_tag',
+  },
+
+  {
+    path: '/appendix_j_tag/',
+    componentUrl: './pages/appe_tag/appendix_j_tag.html',
+    name: 'appendix_j_tag',
+  },
+
+  {
+    path: '/appendix_k_tag/',
+    componentUrl: './pages/appe_tag/appendix_k_tag.html',
+    name: 'appendix_k_tag',
+  },
+
+  {
+    path: '/appendix_l_tag/',
+    componentUrl: './pages/appe_tag/appendix_l_tag.html',
+    name: 'appendix_l_tag',
+  },
+
+  {
+    path: '/appendix_m_tag/',
+    componentUrl: './pages/appe_tag/appendix_m_tag.html',
+    name: 'appendix_m_tag',
+  },
 
 
 

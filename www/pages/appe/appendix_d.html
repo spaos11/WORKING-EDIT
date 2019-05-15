@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,14 +25,60 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/appendix_d_tag/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appd">
+		<div class="block-title"><strong>GUIDELINES ON STUDENT ACTIVITIES</strong></div>
 		
+		
+<p class="txtstyle">
+The Pangasinan State University, in recognition and compliance with the school quality policy, and its utmost acknowledgment of the needs and
+importance of student participation on activity/activities spearheaded by the
+the department, college/s or by the student themselves through their respective organization/s hereby sets guidelines on organizing student activities as follows:<br><br>
 
-		
+
+1. Only activities that are sponsored by a duly recognized student organization or by the Campus, and duly approved by the President and the Director for Student Services will be allowed to be conducted inside the university premises or outside the school as appropriate and necessary;<br>
+2. The activities that will be undertaken by students or organization shall promote the University mission-vision and core values and coordinate with the Supreme Student Council (SSC) or other organization/s having the same objectives
+3. The said activity/ies should be included in the program of activities submitted to SSAA prior to the recognition of the student organization. Activities that are not proposed shall not be allowed to be pursued or subject with the approval of SSAA, Campus Student
+Services Coordinator and Director for Student Services of the University.<br>
+4. The organization concerned or its representative shall be required to accomplish and submit the following documents to SSAA two weeks before the date of the activity:<br><br>
+<b>A. </b>Accomplished Waiver by parents, if applicable;<br>
+<b>B. </b>Resolution, if applicable;<br>
+<b>C. </b>Program of Activity and;<br>
+<b>D. </b>Proposed Budget and Expenses.<br><br>
+
+5. Within 7 working days after the completion of the activity, the student organization/s or its representatives is/are required to submit to the Campus Student Services Coordinator the following:<br><br>
+
+
+<b>A. </b>Accomplishment Report with pictures;<br>
+<b>B. </b>Financial Statement or Liquidation of Funds; and<br>
+<b>C. </b>Result of Evaluation.<br>
+<b>6. </b>Failure of the same to comply with these Guidelines shall mean WARNING to the student Organization/s concerned, all of its officers and revocation of its recognition as provided by the Student Handbook. The said organization is disqualified to participate in the
+search for the outstanding organization of the year.<br>
+7. These guidelines shall be implemented upon approval of the President.<br>
+8. These amended guidelines shall take effect this June 2011.<br><br>
+
+</p>
 		</div>
-
+	</div>
 		<div class="block">
 			<p class="segmented">
 
@@ -44,6 +91,30 @@
 		</div>
 
 		
-	</div>
+
 
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta4 = $('.appd');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta4 	= theContenta4.html();
+		localStorage.newContenta4 = editedContenta4;
+	});
+
+	if(localStorage.getItem('newContenta4')) { // apply the newContent when it is exist ini localStorage
+		theContenta4.html(localStorage.getItem('newContenta4'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

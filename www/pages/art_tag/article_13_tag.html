@@ -1,0 +1,129 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/articles/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Artikulo XIII</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/article_13/" class="fab-label-button">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art13t">
+		<div class="block-title"><strong>Student Code of Discipline</strong></div>
+		
+			<p>
+				
+<b>Seksyon 1.</b>Ang kodigo ay dapat ilapat sa lahat ng mga miyembro ng katawan ng mag-aaral para sa mga pagkakasala
+nakatuon sa loob at labas ng mga lugar ng Unibersidad
+<br><br>
+<b>Seksyon 2.</b>Disiplina. Ang disiplina ay likas na katangian ng tao. Ang panloob na uri ng
+disiplina na hindi ipinapataw sa pamamagitan ng mga parusa ngunit idinidikta ng mga indibidwal na nagmamay-ari
+ang pakiramdam ng tama at mali ay ang pinakamahusay na pagganyak sa kanais-nais na pag-uugali at pag-uugali
+<br><br>
+<b>Seksyon 3.</b>Ang mga panukala ng disiplinaryo ay nangangahulugang mas epektibo ang interpersonal
+mga relasyon sa komunidad ng akademiko. Gayunpaman, para sa layunin ng pagkakaroon ng isang
+karaniwang gabay na dapat govem ang mga gawa ng mga mag-aaral ng PSU at sumasalamin sa
+totoong imahen ng isang Pilipino, inihanda na ang code na ito ng disiplina.
+
+Mga Pangkalahatang Probisyon<br><br>
+
+<b>Seksyon 4.</b> Ang isang mag-aaral ay dapat reprimanded, suspindihin o pinatalsik para sa batas
+sanhi pagkatapos ng angkop na proseso ng batas
+<br><br>
+<b>Seksyon 5.</b>Ang lahat ng mga bagay na may kaugnayan sa pag-uugali at disiplina ng mga mag-aaral ay dapat
+napapailalim sa hurisdiksyon ng opisina ng Guidance Counselor, Coordinator ng
+Mga Serbisyo ng Mag-aaral, ang Direktor ng Direktor ng Kampus, at ang Direktor ng Mag-aaral
+Mga Serbisyo at Alumni Affairs at ang University President sa utos na iyon
+<br><br>
+<b>Seksyon 6.</b> Ang Tribunal ng Disiplina sa Estudyante (antas ng kolehiyo) ay dapat magsagawa ng pormal
+pagsisiyasat sa mga kaso ng mag-aaral na tinutukoy ng Coordinator ng Mga Serbisyo ng Mag-aaral
+at iba pang mga tanggapan. Ang Tribunal na ito ay bubuuin ng Guidance Counselor
+ang Associate Dean ng kinatawan ng guro at isang kinatawan ng mag-aaral.
+Ang kanilang mga natuklasan at rekomendasyon ay ipapasa sa Campus Executive
+Direktor, Direktor ng Unibersidad para sa Mga Serbisyo sa Mag-aaral at Alumni Affairs at ang
+Pangulo ng Unibersidad, para sa aksyong pandisiplina.
+<br><br>
+<b>Seksyon 7.</b> Ang desisyon sa mga kaso ng pagdidisiplina ng mag-aaral ay dapat manirahan sa
+Pangulo ng Unibersidad sa rekomendasyon ng Tribunal ng Disiplina sa Estudyante.
+
+
+			</p>	
+		</div>
+
+</div>
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/article_12_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/article_14_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		</div>
+		
+	
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent16t = $('.art13t');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent16t 	= theContent16t.html();
+		localStorage.newContent16t = editedContent16t;
+	});
+
+	if(localStorage.getItem('newContent16t')) { // apply the newContent when it is exist ini localStorage
+		theContent16t.html(localStorage.getItem('newContent16t'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

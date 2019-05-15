@@ -1,3 +1,4 @@
+<template>
 <div class="page">
 	<div class="navbar">
 		<div class="navbar-inner sliding bg-color-psu">
@@ -24,13 +25,128 @@
 
 
 	<div class="page-content bg-color-white">
-		
-		<div class="block-title"><strong></strong></div>
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/appendix_k_tag/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
 		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appk">
+		<div class="block-title"><strong>REPUBLIC ACT No. 7079</strong></div>
 		
 
-		
+<p class="txtstyle">
+<b> AN ACT PROVIDING FOR THE DEVELOPMENT AND PROMOTION OF
+CAMPUS JOURNALISM AND FOR OTHER PURPOSES</b><br><br>
+
+Be it enacted  by the Senate and House of Representatives of the Philippines in
+Congress assembled:<br><br>
+
+<b>Section 1.</b>Title. -This act shall be known and referred to as the "Campus Journalism Act of 1991."<br><br>
+
+<b>Section 2. </b>Declaration of Policy. - I is the declared policy of the State to uphold
+and protect the freedom of press even at the campus level and to promote the
+development and growth of campus journalism as a means of strengthening
+ethical values, encouraging critical and creative thinking, and developing moral
+character and personal discipline of the Filipino youth. In furtherance of this policy
+the State shall undertake various programs and project aimed at improving the
+journalistic skills of student concerned and promoting responsible and free
+journalism.<br><br>
+
+<b>Section 3.</b>Definition of Terms.<br>
+(a) School.- An institution for learning in the elementary, secondary or tertiary
+level comprised of the studentry, administration, faculty and non-faculty
+personnel;<br>
+(b) Student Publication.- This issue of any printed material that is independently
+published by, and which meets the needs and interest of, the studentry;<br>
+(c) Student Journalist. - Any bona fide student enrolled for the current semester
+or term, who was passed or met the qualification and standards of the
+editorial board. He must likewise maintain a satisfactory academic standing.<br>
+(d) Editorial Board, - In the tertiary level, the editorial board shall be composed
+of student journalist who have qualified in placement examinations. In the
+case of elementary and high school levels, the editorial board shall be
+composed of a duly appointed faculty adviser, the editor who qualified and
+representative of the present Teacher's Association, who will determine the
+editorial policies to be implemented by the editor and staff members of the
+the tertiary level, the editorial board may include a publication adviser at<br>
+ (e) Editorial Policies, - A set of guidelines by which a student publication is operated and managed, taking into account pertinent laws as well as the school administration's policies. Said guidelines shall determine the frequency of the publication, the manner of selecting articles and features and other similar matters.<br><br>
+
+<b>Section 4.</b>Student Publication. - A student publication is published by the
+student body through an editorial board and publication staff composed of student
+selected but fair and competitive examinations
+Once the publication established, its editorial board shall freely determine its
+editorial policies and manage the publication's funds.<br><br>
+
+<b>Section 5.</b>Funding of Student Publications. -Funding for the student
+publication may include the savings of the respective school's appropriations,
+student subscription, donations, and other sources of funds.<br><br>
+
+In no instance shall the Department of Education, Culture and Sports or the
+school administration concerned withhold he release of funds sourced from the
+savings of the appropriations of the respective schools and other sources
+intended for the student publication. Subscription fees collected by the school
+administration shall be released automatically to the student publication
+concerned.<br><br>
+
+
+
+<b>Section 6. </b>Publication adviser. -The publication adviser shall be selected by the
+school administration from a list of recommendees submitted by the publication
+staff. The function of the adviser shall be limited to one of technical guidance.
+<br><br>
+<b>Section 7.</b>Security of Tenure. - A member of the publication staff must maintain
+his or her status as student in order to retain membership in the publication staff.
+A student shall not be expelled or suspended solely on the basis of articles he or
+She has written, or on the basis of the performance of his or her duties in the
+student publication,<br><br>
+
+<b>Section 8.</b>Press conference and Training Seminar. - The Department of
+Education, Culture and Sports shall sponsor periodic competitions, press
+conferences and training seminars in which student-editors/writers and teacher
+adviser of student publication in the elementary, secondary and tertiary level
+shall participate. Such competitions, conferences and seminars shall be held a
+the institutional, divisional and regional levels, culminating with the holding of the
+annual national elementary, secondary and tertiary School Press Conference
+places of historical and/or cultural interest in the country.
+<br><br>
+<b>Section 9.</b>Rules and Regulations.-The Department of Education, Culture and
+Sports, in coordination with the officer of the national elementary, secondary or
+tertiary organizations or official adviser of student publications, together with
+student journalist at the tertiary level and existing organization of the student
+journalist, shall promulgate the rules and regulation necessary for the effective
+implementation of this Act.<br><br>
+
+<b>Section 10.</b>Tax Exemption. -Pursuant to paragraph 4,section 4, Article XIV of the
+Constitution all, all grants endowment, donations or contributions used actually,
+directly and exclusively for the promotion of campus journalism as provided for in
+this Act shall be exempt from the donor's or gift tax.<br><br>
+
+<b>Section 11.</b>Appropriation. - For the initial years of implementation, the sum of
+five million pesos (5,000,000.00) is hereby authorized to be charged against from
+the savings from the current appropriations of the Department of Education
+Culture and Sports . Thereafter, such amount as may be necessary shall be
+included in the General Appropriations Act.<br><br>
+
+<b>Section 12.</b>Effectivity.- This Act shall take effect after fifteen (15) days following
+the completion of this publication in the official Gazette or in at least two (2)
+newspapers of general circulation.<br>
+</p>
 		</div>
+</div>
 
 		<div class="block">
 			<p class="segmented">
@@ -44,6 +160,29 @@
 		</div>
 
 		
-	</div>
-
+	
 </div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta11 = $('.appk');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta11 	= theContenta11.html();
+		localStorage.newContenta11 = editedContenta11;
+	});
+
+	if(localStorage.getItem('newContenta11')) { // apply the newContent when it is exist ini localStorage
+		theContenta11.html(localStorage.getItem('newContenta11'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

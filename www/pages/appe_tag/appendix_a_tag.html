@@ -1,0 +1,118 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/appendix/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Appendix A</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange ">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/appendix_a/" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="/#/" class="fab-label-button">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="appa">
+		<div class = "block-title"> <strong> MGA GARANTIYA AT PAMAMARAAN PARA SA ORGANISASYON NG MAG-AARAL SA PAGPAPAHAYAG PARA SA PUNDO - MGA PROYEKTO / MGA GAWA SA PAGSULONG </strong> </div>
+
+
+<p class = "txtstyle">
+Ang Pangasinan State University ay nagtataguyod ng kahalagahan ng mga Organisasyon ng Mag-aaral sa pagsasakatuparan ng kahusayan sa akademiko - pananaw sa misyon nito. Upang palakasin ang kasarinlan ng mga organisasyon ng mag-aaral at sa pagkakasunud-sunod
+upang makontrol ang kanilang mga aktibidad sa pagbuo ng pondo alinsunod sa pilosopiya ng Unibersidad, ang mga sumusunod na alituntunin at pamamaraan ay dapat ilapat, katulad: <br> <br>
+
+
+<b> A. </b> Ang organisasyon ay dapat magsumite ng isang pondo na nagbibigay ng panukala sa proyekto / proyekto sa mekanika na kinabibilangan ng mga sumusunod: <br>
+1. Pangalan ng Proyekto / Aktibidad na pinopondohan; <br>
+2. Makatwirang paliwanag at Layunin ng Proyekto; <br>
+3. Tinantyang Gastos / Gastos ng proyekto / aktibidad; <br>
+4. Ang kasangkot ng tao at ang kani-kanilang mga tungkulin / tungkulin; <br> <br>
+<b> B. </b> Ang proyektong nakabuo ng pondo ay dapat may kaugnayan sa mga layunin ng mga organisasyon at hindi salungat sa mga probisyon ng Handbook ng Mag-aaral, batas, moralidad, mahusay na kaugalian, pampublikong kaayusan o pampublikong patakaran. <br> <br>
+<b> C. </b> Ang aplikasyon ng mga Organisasyon ng Mag-aaral na magsagawa ng isang aktibidad ng pagbuo ng pondo ay magkakaroon ng pag-endorso mula sa Faculty Adviser, Coordinator ng Campus ng Serbisyo sa Mag-aaral, Tagapangulo ng Kagawaran, at Direktor ng Direktor ng Campus. Ang mga organisasyon ng mag-aaral na hindi kabilang sa anumang partikular na departamento ng akademiko ay dapat itataguyod ng Tagapayo nito. Ang application
+ay isusumite sa opisina ng Campus Student Coordinator ng Serbisyo (CSSC) para sa pagsusuri.<br><br>
+<b> D. </b> Sa kanais-nais na mga natuklasan, ang CSSC ay, kaagad, ipapasa ang aplikasyon sa opisina ng Pangulo ng Unibersidad, sa pamamagitan ng Direktor ng SSAA para sa pag-apruba. Kung hindi man, maaaring nangangailangan ang SSAA ng pagbabago, o tanggihan ang angkop na kurso ng pareho. <br> <br>
+<b> E. </b> Ang pagsusumite ng panukala upang magsagawa ng isang proyekto sa pagbuo ng pondo ay hindi lalampas sa 15 araw bago ang araw ng aktwal na paghawak ng pareho. Ang proposal na hindi isinumite sa loob ng itinakdang panahon na ipinagkaloob dito ay hindi dapat bibigyan ng angkop na kurso <br> <br>
+<b> F. </b> Sampung (10) araw pagkatapos ng petsa ng pagpigil ng aktibidad ng pagbuo ng pondo, ang Pangulo o ang Tesorero ng Organisasyon ay dapat magsumite ng isang
+nakasulat na ulat ng aktibidad kasama ang Pahayag ng Pananalapi at Pagsusuri ng pareho. Pagkabigo sa bahagi ng mga nag-aalala na aplikante
+upang gawin ito tulad ng ipinagkaloob dito ay makikitungo nang naaayon. <br> <br>
+<b> G. </b> Ang organisasyon ay dapat mapanatili ang rekord sa pananalapi nito at dapat na paksa
+sa random na pag-audit ng University Internal Auditor sa pamamagitan ng SSAA. <br>
+<br>
+</p>
+
+
+</div>
+		
+		</div>
+
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/article_15_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/appendix_b_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		
+
+		
+	</div>
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContenta1 = $('.appa');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContenta1 	= theContenta1.html();
+		localStorage.newContenta1 = editedContenta1;
+	});
+
+	if(localStorage.getItem('newContenta1')) { // apply the newContent when it is exist ini localStorage
+		theContenta1.html(localStorage.getItem('newContenta1'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

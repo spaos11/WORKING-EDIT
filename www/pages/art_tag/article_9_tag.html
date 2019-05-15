@@ -1,0 +1,152 @@
+<template>
+<div class="page">
+	<div class="navbar">
+		<div class="navbar-inner sliding bg-color-psu">
+			<div class="left">
+				<a href="/articles/" class="link">
+					<i class="icon icon-back"></i>
+					<span class="ios-only"></span>
+				</a>
+
+
+			 	<div class="title sliding">Artikulo IX</div>
+			</div>
+
+			<div class="right">
+				<a href="#" class="link icon-only panel-open" data-panel="right">
+                    <i class="icon f7-icons ios-only">more</i>
+                    <i class="icon material-icons md-only">menu</i>
+                </a>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div class="page-content bg-color-white">
+		<div class="fab fab-top-left fab-open color-theme-orange">
+                      <a href="#" class="">
+                        <i class="f7-icons">gear</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-bottom">
+                        <a href="/article_9/" class="fab-label-button ">
+                          <span style="font-size: 13px;">ENG</span>
+                          <span class="fab-label">ENGLISH</span>
+                        </a>
+                        <a href="#" class="fab-label-button active-state">
+                          <span style="font-size: 13px;">TAG</span>
+                          <span class="fab-label">TAGALOG</span>
+                        </a>
+
+                      </div>
+                    </div>
+		<div class="block">
+			<span class="edit" onclick="pwd()">edit</span>
+        <span class="save">save</span>
+        <div class="art9t">
+		<div class="block-title"><strong>Other Services to Student</strong></div>
+		
+			<p>
+
+Student Insurance<br><br>
+
+<b>Seksyon 1.</b> Lahat ng mga estudyante ng PSU College ay nakatala sa isang plano ng seguro sa grupo
+Ang mga benepisyong medikal, libing at kamatayan ay ibinibigay sa mga mag-aaral na nakakatugon sa mga aksidente
+kung nasa loob o labas ng lugar ng Unibersidad / Campus sa loob ng panahon ng
+coverage
+<br><br>
+
+Coverage:<br>
+<p class="txtstyle">
+	Saklaw ng seguro ang lahat ng mga nakaseguro na mga estudyante laban sa pagkawala ng resulta
+aksidenteng pinsala sa katawan o kamatayan, Ang coverage ay nagbibigay ng proteksyon sa
+Ang mga estudyante ay dalawampu't apat (24) na oras sa isang araw sa kabuuan ng isang (1) kalendaryong taon ng paaralan ngunit
+hindi lalampas sa labindalawang (12) buwan, kahit saan sa mundo, kung sila ay nasa o
+sa mga lugar ng paaralan; habang pumapasok sa klase sa mga oras at mga araw
+kapag ang paaralan ay nasa sesyon; kabilang ang tanghalian at mga bakanteng panahon; habang naglalakbay
+pampubliko at pribadong sasakyan na ginagamit para sa paglalakbay sa lupa at dagat; habang naglalakbay bilang
+pasahero-nagbabayad na pasahero sa anumang komersyal na naka-iskedyul na flight.
+</p>
+
+<table>
+	<tr>
+		<th>Mga benepisyo:</th><th></th>
+	</tr>
+	<tr>
+		<td>Classification	</td><td>Amount</td>
+	</tr>
+	<tr>
+		<td>Accidental Death&Permanent Disablement (ADD)</td><td>50,000.00</td>
+	</tr>
+	<tr>
+		<td>Unprovoked Murder & Assault (UMA)</td><td>50,000.00</td>
+	</tr>
+	<tr>
+		<td>Accident Medical Reimbursement (AMR)</td><td>7,500.00</td>
+	</tr>
+	<tr>
+		<td>Motorcycling</td><td>5,000.00</td>
+	</tr>
+	<tr>
+		<td>Accidental Burial Benefit (ABB)</td><td>10,000.00</td>
+	</tr>
+	<tr>
+		<td>Cash Assistance - Natural Death	</td><td>3,000.00</td>
+	</tr>
+	<tr>
+		<td>Daily Hospital Income (Max. 30 days)</td><td>200.00</td>
+	</tr>
+</table>
+<br>
+
+Mga Kaligtasan at Mga Serbisyong Seguridad<br><br>
+
+<b>Seksyon 2.</b>Ang PSU Security Unit ay nagbibigay ng seguridad at kaligtasan sa lahat ng mga estudyante at
+tauhan. nagsisilbing isang person contact / party sa mga kaso ng mga emerhensiya anumang oras ng
+ang araw. Nakakatulong ito sa pagpapanatili ng kalinisan, kaayusan at kapayapaan ng
+PSU na kapaligiran.
+
+
+			</p>	
+		</div>
+</div>
+		<div class="block">
+			<p class="segmented">
+
+				<a href="/article_8_tag/" class="button button-outline button-active color-blue">Previous</a>
+
+				<a href="/" class="button button-outline button-active color-red" onclick="window.location.reload();">Home</a>
+
+				<a href="/article_10_tag/" class="button button-outline button-active color-blue">Next</a>        
+		    </p>
+		</div>
+
+	
+
+</div>
+</template>
+<script>
+  // script must return component object
+  return {
+    on: {
+      pageInit: function () {
+        // do something on page init
+        var theContent12t = $('.art9t');// set the content
+
+	$('.save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent12t 	= theContent12t.html();
+		localStorage.newContent12t = editedContent12t;
+	});
+
+	if(localStorage.getItem('newContent12t')) { // apply the newContent when it is exist ini localStorage
+		theContent12t.html(localStorage.getItem('newContent12t'));
+	}
+      },
+      pageAfterOut: function () {
+        // page has left the view
+      },
+    }
+  }
+</script>

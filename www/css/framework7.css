@@ -23828,7 +23828,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 }
 /* === FAB === */
 .fab {
-  position: absolute;
+  position: fixed;
   z-index: 1500;
 }
 .fab > a,
@@ -24095,12 +24095,14 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   overflow: visible !important;
 }
 .fab-label {
+  opacity: 0.8;
   position: absolute;
   top: 50%;
+  left: 45px;
   padding: 4px 12px;
   border-radius: 4px;
-  background: #fff;
-  color: #333;
+  background: #35416D !important;
+  color: white;
   white-space: nowrap;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -24198,6 +24200,8 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .ios .color-theme-red.fab-buttons a {
   background: #ff3b30;
 }
+
+
 .ios .color-theme-red .fab > a.active-state,
 .ios .color-theme-red .fab-buttons a.active-state,
 .ios .color-theme-red.fab > a.active-state,
@@ -24514,8 +24518,8 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
 .md .fab > a,
 .md .fab-buttons a {
   background: #2196f3;
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   border-radius: 28px;
   color: #fff;
   -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -24532,7 +24536,7 @@ html.device-desktop .data-table .sortable-cell:not(.sortable-cell-active) .table
   right: 15px;
 }
 .md .fab[class*="-top"] {
-  top: 15px;
+  top: 0px;
 }
 .md .fab[class*="-bottom"] {
   bottom: 15px;
